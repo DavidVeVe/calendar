@@ -1,0 +1,131 @@
+.calendar__modal {
+  &__overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  &__body {
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    left: 25%;
+    right: 25%;
+    border-radius: 19px;
+    z-index: 10;
+    background-color: #ffffff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      &--right {
+        display: flex;
+        align-items: center;
+        margin-right: 10%;
+      }
+
+      &__avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__user-name {
+        font-size: 24px;
+        margin-left: 10px;
+      }
+
+      h1 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+
+      &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      &--subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      &--text {
+        font-size: 16px;
+        font-weight: 700;
+        color: #d4145a;
+
+        &--recorded {
+          color: #8065C9;
+        }
+
+      }
+
+      &__bottom {
+        background-color: #d4145a;
+        border: none;
+        border-radius: 11px;
+        color: #fff;
+        font-size: 16px;
+        padding: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        &--recorded {
+          background-color: #8065c9;
+        }
+      }
+    }
+
+    &__footer {
+      display: flex;
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 35px 0 0;
+      }
+
+      &__links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          color: #2D224C;
+        }
+      }
+    }
+  }
+}

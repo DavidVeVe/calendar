@@ -1,0 +1,23 @@
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+
+  &__labels {
+    display: flex;
+
+    &__label {
+      width: 165px;
+      margin: 1.5px 2px;
+      text-align: center;
+      padding: 5px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+
+  &__days {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

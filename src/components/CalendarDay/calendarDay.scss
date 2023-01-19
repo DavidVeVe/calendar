@@ -1,0 +1,81 @@
+.calendar-day,
+.calendar-day--is-from-prev-month {
+  background-color: #fff;
+  width: 165px;
+  height: 171px;
+  border-radius: 5px;
+  margin: 1.5px 2px;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &--is-active {
+    outline: 2px solid #d4145a;
+    align-items: center;
+  }
+
+  &__number {
+    color: #2d224c;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+    &--is-active {
+      width: 21px;
+      height: 21px;
+      color: #fff;
+      background-color: #d4145a;
+      border-radius: 50%;
+    }
+  }
+
+  &__events {
+    color: #2D224C;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__event {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 5px 0;
+      background-color: #D9DAF3;
+      border-radius: 4px;
+      font-weight: 600;
+      line-height: 1.5;
+      padding: 3px 20px;
+      position: relative;
+      border: none;
+      transition: .1s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        transition: .1s;
+      }
+
+      &__event-time {
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 7px;
+          height: 7px;
+          border: 1px solid #D4145A;
+          border-radius: 50%;
+          position: absolute;
+          left: 6px;
+          top: 7px;
+        }
+      }
+    }
+  }
+
+  &--is-from-prev-month {
+    .calendar-day__number--is-from-prev-month {
+      font-weight: bold;
+      color: #c4c4c4;
+    }
+  }
+}
